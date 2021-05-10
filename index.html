@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title> Ninja-gato </title>
+        <!-- Bootstrap core CSS -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+        <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+        <script>
+            $(document).ready(function() {
+                console.log('El documento está listo! ');
+
+                $('img').click(function() {
+                    console.log('gato ha sido clickeado');
+                    let clase1 = $(this).attr('src');
+                   
+                    if( clase1[7]=='g') {
+                        $(this).attr('src', function() {
+                            let variable = 'images/ninja' + clase1[11] + '.png'
+                            return variable;
+                        })
+                        console.log(clase1[7]);
+                    }
+                    else if(clase1[7]=='n') {
+                        $(this).attr('src',function() {
+                            let variable = 'images/gato' + clase1[12] + '.png';
+                            return variable;
+                        });
+                        console.log(clase1[7]);
+
+                
+                    }
+                });
+            });
+        </script>
+
+        <style>
+            body *{
+                outline: 1px solid red;
+            }
+            .center {
+                text-align: center;
+            }
+
+        </style>
+    </head>
+
+    <body>
+        <div class="row center">
+            <div class="col">
+                <img src="images/gato1.png" alt="gato1">
+            </div>
+            <div class="col">
+                <img src="images/gato2.png" alt="gato2">
+            </div>
+            <div class="col">
+                <img src="images/gato3.png" alt="gato3">
+            </div>
+            <div class="col">
+                <img src="images/gato4.png" alt="gato4">
+            </div>
+            <div class="col">
+                <img src="images/gato5.png" alt="gato5">
+            </div>
+        </div>
+
+    </body>
+
+</html>
